@@ -1,0 +1,15 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_eazis_3
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: password  # Замените на ваш пароль для root
+      MYSQL_DATABASE: database         # Имя создаваемой базы данных
+      MYSQL_USER: user                    # Имя пользователя
+      MYSQL_PASSWORD: password       # Пароль пользователя
+    ports:
+      - "3306:3306"
+
+
+

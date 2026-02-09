@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализатор языка текста</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Анализатор языка текста</h1>
+            <p>Анализ веб-страниц с помощью нейросетей и извлечения предложений</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="url-input-group">
+                    <input type="text" id="urlInput" placeholder="Введите URL для анализа (например: https://example.com)">
+                    <button id="analyzeBtn">Анализировать</button>
+                </div>
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <span>Анализируем URL...</span>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <div class="url-display">
+                        <h2>Результаты анализа</h2>
+                        <div class="analyzed-url">
+                            <strong>Проанализирован URL:</strong>
+                            <a href="#" id="analyzedUrlLink" target="_blank" id="analyzedUrlDisplay"></a>
+                        </div>
+                    </div>
+                    <div class="save-section">
+                        <input type="text" id="filenameInput" placeholder="Имя файла для сохранения">
+                        <button id="saveBtn">Сохранить результаты</button>
+                    </div>
+                </div>
+
+                <div class="results-content">
+                    <div class="method-section">
+                        <h3>Нейросеть</h3>
+                        <div class="abstract-section">
+                            <h4>Классический абстракт:</h4>
+                            <div class="abstract-content" id="neuralClassic"></div>
+                        </div>
+                        <div class="abstract-section">
+                            <h4>Ключевые слова:</h4>
+                            <div class="abstract-content" id="neuralKeywords"></div>
+                        </div>
+                    </div>
+
+                    <div class="method-section">
+                        <h3>Извлечение предложений</h3>
+                        <div class="abstract-section">
+                            <h4>Классический абстракт:</h4>
+                            <div class="abstract-content" id="extractionClassic"></div>
+                        </div>
+                        <div class="abstract-section">
+                            <h4>Ключевые слова:</h4>
+                            <div class="abstract-content" id="extractionKeywords"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
